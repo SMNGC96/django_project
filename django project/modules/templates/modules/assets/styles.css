@@ -92,6 +92,25 @@ h1 {
   background-color: #994ccc;
 }
 
+.drop-down {
+  margin-left: 5rem;
+}
+
+.modules-panel {
+  display: none;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  border: none;
+}
+.drop-down {
+  background: lightgray;
+  border: none;
+}
+
+.fa-bar {
+  color: #ccc;
+}
+
 @media screen and (min-width: 868px) {
   nav ul {
     display: inline-flex;
@@ -130,5 +149,10 @@ h1 {
   .icons li {
     padding: 3rem;
     font-size: 5rem;
+  }
+  .modules-panel {
+    display: none;
+    justify-content: center;
+    margin: 0 3rem 0 -3rem;
   }
 }
