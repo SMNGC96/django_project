@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/normalize.css" />
-    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="static/normalize.css" />
+    <link rel="stylesheet" href="static/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +17,7 @@
       src="https://kit.fontawesome.com/d7e8f7fb4c.js"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/script.js"></script>
+    <script src="static/script.js"></script>
     <title>UNISA Computing</title>
   </head>
   <body>
@@ -28,11 +28,15 @@
       </span>
       <ul>
         <li>
-          <a href="#" id="modules-select">Modules</a>
+          <a href="{% url 'modules:index' %}" id="modules-select">Modules</a>
           <i class="fa-solid fa-book fa-bar"></i>
         </li>
-        <li><a href="#">About </a><i class="fa-solid fa-circle-info fa-bar"></i></li>
-        <li><a href="#">Contact Us </a><i class="fa-solid fa-phone fa-bar"></i></li>
+        <li>
+          <a href="#">About </a><i class="fa-solid fa-circle-info fa-bar"></i>
+        </li>
+        <li>
+          <a href="#">Contact Us </a><i class="fa-solid fa-phone fa-bar"></i>
+        </li>
       </ul>
     </nav>
     <div class="modules-panel">
@@ -118,7 +122,9 @@
           <li><i class="fa-solid fa-server"></i></li>
           <li><i class="fa-solid fa-network-wired"></i></li>
         </ul>
-        <button class="btn">See Modules</button>
+        <a href="{% url 'modules:index' %}">
+          <button class="btn">See Modules</button></a
+        >
       </div>
     </main>
   </body>

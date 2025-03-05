@@ -123,6 +123,10 @@ h1 {
   }
 }
 
+.table {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
 @media screen and (max-width: 868px) {
   h1 {
     display: none;

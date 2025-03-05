@@ -1,0 +1,14 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+    <dl>
+    <dt>Course Code</dt>
+    <dd>{{ module.course_code }}</dd>
+    <dt>Description</dt>
+    <dd>{{ module.title }}</dd>
+    <dt>Difficulty Rating</dt>
+    <dd>{{ module.difficulty_level }}</dd>
+    </dl>
+
+{% endblock %}
