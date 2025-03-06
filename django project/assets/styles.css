@@ -97,10 +97,9 @@ h1 {
 }
 
 .modules-panel {
-  display: none;
+  display: flex; /* TODO */
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
-  border: none;
+  font-size: 2rem;
 }
 .drop-down {
   background: lightgray;
@@ -155,7 +154,7 @@ h1 {
     font-size: 5rem;
   }
   .modules-panel {
-    display: none;
+    display: flex; /* TODO */
     justify-content: center;
     margin: 0 3rem 0 -3rem;
   }
