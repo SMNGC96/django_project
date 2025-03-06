@@ -97,17 +97,25 @@ h1 {
 }
 
 .modules-panel {
-  display: flex; /* TODO */
+  display: none; /* TODO */
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  border-radius: 10px;
 }
+
 .drop-down {
-  background: lightgray;
+  background: none;
+  opacity: 1;
   border: none;
 }
 
 .fa-bar {
   color: #ccc;
+}
+
+#the-select{
+  background-color: #ccc;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 868px) {
@@ -154,7 +162,7 @@ h1 {
     font-size: 5rem;
   }
   .modules-panel {
-    display: flex; /* TODO */
+    display: none;
     justify-content: center;
     margin: 0 3rem 0 -3rem;
   }
