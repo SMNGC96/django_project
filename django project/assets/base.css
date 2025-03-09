@@ -1,36 +1,26 @@
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    margin: 10px;
-    font-size: 1.6rem;
-    width: 100vw;
-    overflow-x: hidden;
-   
-  }
-nav, .heading-container {
-    padding: 0.7rem;
-    padding-top: 2rem;
-    padding-left: 5rem;
-    font-weight: bold;
+  margin: 10px;
+  font-size: 1.6rem;
+  width: 100vw;
+  overflow-x: hidden;
 }
-
+nav,
+.heading-container {
+  padding: 0.7rem;
+  padding-top: 2rem;
+  padding-left: 5rem;
+  font-weight: bold;
+}
 .heading {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 .header {
-    font-size: 2rem;
+  font-size: 2rem;
 }
-
 .heading-container {
-    margin-bottom: 5rem;
-}
-.table-bordered td, .table-bordered th {
-    border-left: none;
-    border-right: none;
-}
-
-.table-bordered tr:nth-child(odd) {
-    background-color: #ccc;
+  margin-bottom: 5rem;
 }

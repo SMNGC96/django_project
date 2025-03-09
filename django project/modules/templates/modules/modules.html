@@ -1,19 +1,26 @@
 {% extends "base.html" %} {% block title %} Modules {% endblock %} 
 {% block heading %} Modules {% endblock %} 
-
+{% block styles %} <link rel="stylesheet" href="/static/modules.css"> {% endblock %}
 {% block content %}
-<table class="table table-bordered table-hover">
-  <thead>
-    <tr>
-      <th>Course Code</th>
-      <th>Description</th>
-      <th>Level</th>
-      <th>Difficulty Rating</th>
+
+<table class="table table-striped js-modules-table">
+  <div class="filter-container">
+    <input type="text" class="table-filter" >
+    <button class="filter-button">
+      <i class="fa-solid fa-filter filter-icon"></i>
+    </button>
+  </div>
+  <thead class="table-header">
+    <tr class="table-row">
+      <th class="table-header">Course Code</th>
+      <th class="table-header">Description</th>
+      <th class="table-header">Level</th>
+      <th class="table-header">Difficulty Rating</th>
     </tr>
   </thead>
   <tbody>
     {% for module in modules %}
-    <tr>
+    <tr class="table-row">
       <td>
         <a href="{% url 'modules:detail' module.course_code %}"
           >{{ module.course_code }}</a
@@ -31,4 +38,5 @@
     {% endfor %}
   </tbody>
 </table>
+<script src="/static/modules.js" defer></script>
 {% endblock %}
