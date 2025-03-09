@@ -3,6 +3,7 @@ const modulesTable = document.querySelector(".js-modules-table");
 console.log(modulesTable);
 
 document.addEventListener("DOMContentLoaded", function () {
+    
   const table = document.querySelector(".js-modules-table");
   const filterInput = document.querySelector(".table-filter");
   const filterButton = document.querySelector(".filter-button");

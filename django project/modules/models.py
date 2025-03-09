@@ -30,6 +30,7 @@ class Module(models.Model):
     level = models.ForeignKey(
         Level, on_delete=models.CASCADE, related_name="modules")
     date_created = models.DateTimeField(default=timezone.now)
+    summary = models.CharField(max_length=400, blank=True, default="")
 
     def __str__(self):
         return f"{self.course_code} - {self.title}"

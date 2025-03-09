@@ -1,14 +1,33 @@
-{% extends "base.html" %} 
-
+{% extends "base.html" %}
+{% block title %}{{ module.course_code }} - {{ module.title }}{% endblock %}
+{% block heading %}{{ module.course_code }} - {{ module.title }}{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="/static/detail.css">
+{% endblock %}
 {% block content %}
-
-    <dl>
-    <dt>Course Code</dt>
-    <dd>{{ module.course_code }}</dd>
-    <dt>Description</dt>
-    <dd>{{ module.title }}</dd>
-    <dt>Difficulty Rating</dt>
-    <dd>{{ module.difficulty_level }}</dd>
-    </dl>
-
+<div class="return-container js-card">
+    <a href="{% url 'modules:index' %}">Return to all modules</a>
+</div>
+<div id="container" class="card">
+    <div class="card-inner">
+        <div class="card-front">
+            <dl>
+                <dt>Course Code</dt>
+                <dd>{{ module.course_code }}</dd>
+                <dt>Description</dt>
+                <dd>{{ module.title }}</dd>
+                <dt>Level</dt>
+                <dd>{{ module.level }}</dd>
+            </dl>
+            <div class="rating-container">
+                <h2>Difficulty Rating</h2>
+            </div>
+            <div class="difficulty-container">{{ module.difficulty_level }}</div>
+        </div>
+        <div class="card-back">
+            <p>{{ module.summary }}</p>
+        </div>
+    </div>
+</div>
+<script src="/static/detail.js"></script>
 {% endblock %}
