@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdown = document.getElementsByClassName("modules-panel")[0];
+  const dropdown = document.querySelector('.module-panel');
   const modulesSelect = document.getElementById("modules-select");
   let timeoutId = null;
 
