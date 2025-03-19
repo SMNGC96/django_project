@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdown = document.querySelector('.module-panel');
+  const dropdown = document.getElementsByClassName("modules-panel")[0];
   const modulesSelect = document.getElementById("modules-select");
   let timeoutId = null;
 
@@ -24,3 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+const contactUsButton = document.querySelector(".contact-us");
+const dialog = document.querySelector(".dialog");
+const closeButton = document.querySelector(".close-modal");
+
+contactUsButton.onclick = () => {
+  dialog.showModal();
+};
+
+closeButton.onclick = () => {
+  dialog.close();
+};

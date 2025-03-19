@@ -28,8 +28,7 @@
       </span>
       <ul>
         <li>
-          <a href="{% url 'modules:index' %}" 
-          id="modules-select">Modules</a>
+          <a href="{% url 'modules:index' %}" id="modules-select">Modules</a>
           <i class="fa-solid fa-book fa-bar"></i>
         </li>
         <li>
@@ -37,8 +36,43 @@
           ><i class="fa-solid fa-circle-info fa-bar"></i>
         </li>
         <li>
-          <a href="#">Contact Us </a><i class="fa-solid fa-phone fa-bar"></i>
+          <a class="contact-us" href="#">Contact Us </a
+          ><i class="fa-solid fa-phone fa-bar"></i>
         </li>
+        <dialog class="dialog animate">
+          <button class="close-modal">&times;</button>
+          <div class="alternate-contact">
+            <p class="cannot-find">Can't find something? 🫤</p>
+            <h2>Contact Us</h2>
+            <i class="fa-brands fa-square-whatsapp"></i>
+            <p>
+              Whatsapp us on
+              <a
+                class="my-cell-link"
+                href="https://wa.me/27631272682"
+                target="_blank"
+                >(+27) 63 127 2682</a
+              >
+            </p>
+            <p>OR</p>
+            <i class="fa-solid fa-envelope"></i>
+            <p>
+              Email us at
+              <a class="my-email-link" href="mailto:smngcemu@gmail.com"
+                >smngcemu@gmail.com</a
+              >
+            </p>
+            <p>OR alternatively, try</p>
+            <p>
+              <a
+                class="study-buddy-link"
+                href="https://studybuddy.pythonanywhere.com/"
+                target="_blank"
+                >Study Buddy</a
+              >
+            </p>
+          </div>
+        </dialog>
       </ul>
     </nav>
     <div class="modules-panel">

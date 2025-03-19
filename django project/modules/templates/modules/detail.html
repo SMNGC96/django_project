@@ -7,7 +7,7 @@
 {% block content %}
 
     <div class="return-container js-card">
-        <a href="{% url 'modules:index' %}">Return to all modules</a>
+        <a href="{% url 'modules:index' %}"> &#10094 Return to all modules</a>
     </div>
     <section class="grid-container">
         <div id="container" class="card">
@@ -33,6 +33,13 @@
         </div>
        <div class="sidebar">
         <h1>Textbook</h1>
+        <div class="pdf-preview">
+            {% if module.textbook %}
+                <p><a href="{{ module.textbook.url }}" target="_blank">Open textbook in a New Tab</a></p>
+            {% else %}
+                    <p>No textbook for this module available</p>
+                {% endif %}
+        </div>
        </div>
     </section>
 
