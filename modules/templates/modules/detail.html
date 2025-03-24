@@ -35,7 +35,7 @@
         <h1>Textbook</h1>
         <div class="pdf-preview">
             {% if module.textbook %}
-                <p><a href="{{ module.textbook.url }}" target="_blank">Open textbook in a New Tab</a></p>
+                <p><a href="{{ module.textbook}}" target="_blank">Open textbook in a New Tab</a></p>
             {% else %}
                     <p>No textbook for this module available</p>
                 {% endif %}
