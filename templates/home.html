@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/normalize.css" />
+    <link rel="stylesheet" href="static/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rye&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d7e8f7fb4c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>UNISA Computing</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <span class="heading">
+        <h1>UNISA Computing</h1>
+        <i class="fa-solid fa-computer"></i>
+      </span>
+      <ul>
+        <li>
+          <a href="{% url 'modules:index' %}" id="modules-select">Modules</a>
+          <i class="fa-solid fa-book fa-bar"></i>
+        </li>
+        <li>
+          <a href="{% url 'about' %}">About </a
+          ><i class="fa-solid fa-circle-info fa-bar"></i>
+        </li>
+        <li>
+          <a class="contact-us" href="#">Contact Us </a
+          ><i class="fa-solid fa-phone fa-bar"></i>
+        </li>
+        <dialog class="dialog animate">
+          <button class="close-modal">&times;</button>
+          <div class="alternate-contact">
+            <p class="cannot-find">Can't find something? 🫤</p>
+            <h2>Contact Us</h2>
+            <i class="fa-brands fa-square-whatsapp"></i>
+            <p>
+              Whatsapp us on
+              <a
+                class="my-cell-link"
+                href="https://wa.me/27631272682"
+                target="_blank"
+                >(+27) 63 127 2682</a
+              >
+            </p>
+            <p>OR</p>
+            <i class="fa-solid fa-envelope"></i>
+            <p>
+              Email us at
+              <a class="my-email-link" href="mailto:smngcemu@gmail.com"
+                >smngcemu@gmail.com</a
+              >
+            </p>
+            <p>OR alternatively, try</p>
+            <p>
+              <a
+                class="study-buddy-link"
+                href="https://studybuddy.pythonanywhere.com/"
+                target="_blank"
+                >Study Buddy</a
+              >
+            </p>
+          </div>
+        </dialog>
+      </ul>
+    </nav>
+    <div class="modules-panel">
+      <form class="drop-down">
+        <select
+          name="selected-module"
+          onchange="if (this.value) window.location = this.value;"
+          id="the-select"
+        >
+          <option value="">Please select a module...</option>
+          <optgroup label="Level 1">
+            <option value="{% url 'modules:detail' 'inf1505' %}">
+              INF1505 - Introduction to Business Information Systems
+            </option>
+            <option value="{% url 'modules:detail' 'inf1511' %}">
+              INF1511 - Visual Programming I
+            </option>
+            <option value="{% url 'modules:detail' 'cos1511' %}">
+              COS1511 - Introduction to Programming I
+            </option>
+            <option value="{% url 'modules:detail' 'cos1512' %}">
+              COS1512 - Introduction to Programming II
+            </option>
+            <option value="{% url 'modules:detail' 'cos1501' %}">
+              COS1501 - Theoretical Computer Science I
+            </option>
+            <option value="{% url 'modules:detail' 'cos1521' %}">
+              COS1521 - Computer Systems - Fundamental Concepts
+            </option>
+            <option value="{% url 'modules:detail' 'inf1520' %}">
+              INF1520 - Human Computer Interaction I
+            </option>
+            <option value="{% url 'modules:detail' 'mat1503' %}">
+              MAT1503 - Linear Algebra I
+            </option>
+            <option value="{% url 'modules:detail' 'mat1512' %}">
+              MAT1512 - Calculus A
+            </option>
+          </optgroup>
+          <optgroup label="Level 2">
+            <option value="{% url 'modules:detail' 'cos2601' %}">
+              COS2601 - Theoretical Computer Science II
+            </option>
+            <option value="{% url 'modules:detail' 'cos2611' %}">
+              COS2611 - Data Structures
+            </option>
+            <option value="{% url 'modules:detail' 'cos2614' %}">
+              COS2614 - Programming - Contemporary Concepts
+            </option>
+            <option value="{% url 'modules:detail' 'cos2621' %}">
+              COS2621 - Computer Organisation
+            </option>
+            <option value="{% url 'modules:detail' 'cos2626' %}">
+              COS2626 - Computer Networks
+            </option>
+            <option value="{% url 'modules:detail' 'cos2661' %}">
+              COS2661 - Formal Logic II
+            </option>
+            <option value="{% url 'modules:detail' 'ict2621' %}">
+              ICT2621 - Structured Systems Analysis and Design
+            </option>
+            <option value="{% url 'modules:detail' 'ict2622' %}">
+              ICT2622 - Object Oriented Analysis
+            </option>
+            <option value="{% url 'modules:detail' 'inf2603' %}">
+              INF2603 - Databases I
+            </option>
+            <option value="{% url 'modules:detail' 'sta1610' %}">
+              STA1610 - Introduction to Statistics
+            </option>
+          </optgroup>
+          <optgroup label="Level 3">
+            <option value="{% url 'modules:detail' 'cos3701' %}">
+              COS3701 - Theoretical Computer Science III
+            </option>
+            <option value="{% url 'modules:detail' 'cos3711' %}">
+              COS3711 - Advanced Programming
+            </option>
+            <option value="{% url 'modules:detail' 'cos3721' %}">
+              COS3721 - Operating Systems and Architecture
+            </option>
+            <option value="{% url 'modules:detail' 'inf3703' %}">
+              INF3703 - Databases II
+            </option>
+            <option value="{% url 'modules:detail' 'inf3705' %}">
+              INF3705 - Advanced Systems Development
+            </option>
+            <option value="{% url 'modules:detail' 'inf3707' %}">
+              INF3707 - Database Design and Implementation
+            </option>
+            <option value="{% url 'modules:detail' 'inf3708' %}">
+              INF3708 - Software Project Management
+            </option>
+            <option value="{% url 'modules:detail' 'cos3761' %}">
+              COS3761 - Formal Logic III
+            </option>
+            <option value="{% url 'modules:detail' 'cos3712' %}">
+              COS3712 - Computer Graphics
+            </option>
+            <option value="{% url 'modules:detail' 'cos3751' %}">
+              COS3751 - Techniques of Artificial Intelligence
+            </option>
+          </optgroup>
+        </select>
+      </form>
+    </div>
+    <main class="main">
+      <div class="banner">
+        <p class="banner-text">
+          Unlock Learning with UNISA Computing, Your All-in-One Study Hub
+        </p>
+        <p class="banner-text banner-text-desc">
+          Link Up with Legends to Conquer Mind-Bending Challenges
+        </p>
+        <ul class="icons">
+          <li><i class="fa-solid fa-database"></i></li>
+          <li><i class="fa-solid fa-server"></i></li>
+          <li><i class="fa-solid fa-network-wired"></i></li>
+        </ul>
+        <a href="{% url 'modules:index' %}">
+          <button class="btn">See Modules</button></a
+        >
+      </div>
+    </main>
+  </body>
+  <script src="static/script.js" defer></script>
+</html>

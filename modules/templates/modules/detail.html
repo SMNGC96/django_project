@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}{{ module.course_code }} - {{ module.title }}{% endblock %}
+{% block heading %}{{ module.course_code }} - {{ module.title }}{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="/static/detail.css">
+{% endblock %}
+{% block content %}
+
+    <div class="return-container js-card">
+        <a href="{% url 'modules:index' %}"> &#10094 Return to all modules</a>
+    </div>
+    <section class="grid-container">
+        <div id="container" class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <dl>
+                        <dt>Course Code</dt>
+                        <dd>{{ module.course_code }}</dd>
+                        <dt>Description</dt>
+                        <dd>{{ module.title }}</dd>
+                        <dt>Level</dt>
+                        <dd>{{ module.level }}</dd>
+                    </dl>
+                    <div class="rating-container">
+                        <h2>Difficulty Rating</h2>
+                    </div>
+                    <div class="difficulty-container">{{ module.difficulty_level }}</div>
+                </div>
+                <div class="card-back">
+                    <p>{{ module.summary }}</p>
+                </div>
+            </div>
+        </div>
+       <div class="sidebar">
+        <h1>Textbook</h1>
+        <div class="pdf-preview">
+            {% if module.textbook %}
+                <p><a href="{{ module.textbook.url }}" target="_blank">Open textbook in a New Tab</a></p>
+            {% else %}
+                    <p>No textbook for this module available</p>
+                {% endif %}
+        </div>
+       </div>
+    </section>
+
+<script src="/static/detail.js"></script>
+{% endblock %}
