@@ -21,10 +21,12 @@ class Level(models.Model):
 class Module(models.Model):
     title = models.CharField(max_length=255, unique=True)
     course_code = models.CharField(max_length=10, unique=True, db_index=True)
-    textbook = models.FileField(
-        upload_to="textbooks/", null=True, blank=True, validators=[validate_pdf_file])
-    notes = models.FileField(
-        upload_to="notes/", null=True, blank=True, validators=[validate_pdf_file])
+    textbook = models.URLField(
+        max_length=500, null=True, blank=True, help_text="URL to the textbook PDF on OneDrive"
+    )
+    notes = models.URLField(
+        max_length=500, null=True, blank=True, help_text="URL to the notes Folder on OneDrive"
+    )
     difficulty_level = models.IntegerField(
         default=0, validators=[MinValueValidator(0), MaxValueValidator(10)], help_text="Difficulty from 0 to 10")
     level = models.ForeignKey(
