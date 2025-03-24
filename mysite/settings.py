@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=f'sqlite:///{os.path.join(BASE_DIR, "db.sqlite3")}',
+        default='sqlite:///db.sqlite3',  # Fallback for local dev
         conn_max_age=600
     )
 }
